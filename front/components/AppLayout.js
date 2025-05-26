@@ -7,11 +7,20 @@ const StyledLayout = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+const StyledContents = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const AppLayout = ({ children }) => {
   return (
     <>
       <Navigation />
-      <StyledLayout>{children}</StyledLayout>
+      <StyledLayout>
+        <StyledContents>{children}</StyledContents>
+      </StyledLayout>
     </>
   );
 };

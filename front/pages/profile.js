@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
+import LoginForm from "../components/LoginForm";
 
 const Profile = () => {
   return (
@@ -10,7 +11,8 @@ const Profile = () => {
         <title>REACT SNS APP || Profile</title>
       </Head>
       <AppLayout>
-        <div>Profile</div>
+        <h2>Profile</h2>
+        <LoginForm />
       </AppLayout>
     </>
   );
