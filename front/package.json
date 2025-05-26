@@ -10,7 +10,8 @@
   "author": "hyein",
   "license": "ISC",
   "dependencies": {
-    "next": "^9.5.5"
+    "next": "^9.5.5",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "eslint": "^9.27.0",

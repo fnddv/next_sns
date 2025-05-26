@@ -1,24 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "next/Link";
+import styled from "styled-components";
+import Navigation from "./Navigations";
 
+const StyledLayout = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 const AppLayout = ({ children }) => {
   return (
     <>
-      <div>
-        <nav>
-          <Link href="/">
-            <a>처음으로</a>
-          </Link>
-          <Link href="/signup">
-            <a>회원가입</a>
-          </Link>
-          <Link href="/profile">
-            <a>프로필</a>
-          </Link>
-        </nav>
-      </div>
-      {children}
+      <Navigation />
+      <StyledLayout>{children}</StyledLayout>
     </>
   );
 };
