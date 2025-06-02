@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/Link";
 import styled from "styled-components";
+import IconHeart from "../resources/aaa.jpeg";
 
 const StyledNavigation = styled.nav`
   display: grid;
@@ -41,7 +42,9 @@ const AppLayout = ({ children }) => {
           <a>HOME</a>
         </Link>
         <Link href="/">
-          <a>LIKE</a>
+          <a>
+            <IconHeart />
+          </a>
         </Link>
         <Link href="/">
           <a>SEARCH</a>
