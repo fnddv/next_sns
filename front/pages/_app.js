@@ -18,4 +18,5 @@ const App = ({ Component }) => {
 App.prototype = {
   Component: PropTypes.node.isRequired,
 };
+
 export default App;

@@ -7,7 +7,7 @@ const SignUp = () => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>REACT SNS APP || Signup</title>
+        <title>Signup || REACT SNS APP</title>
       </Head>
       <AppLayout>
         <div>SignUp</div>

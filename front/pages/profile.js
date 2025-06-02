@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import AppLayout from "../components/AppLayout";
 import LoginForm from "../components/LoginForm";
+import UserProfile from "../components/UserProfile";
 
 const Profile = () => {
+  const [isLoggedIn, setIsloggedIn] = useState(false);
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
-        <title>REACT SNS APP || Profile</title>
+        <title>Profile || REACT SNS APP </title>
       </Head>
       <AppLayout>
         <h2>Profile</h2>
-        <LoginForm />
+        {isLoggedIn ? <UserProfile /> : <LoginForm />}
       </AppLayout>
     </>
   );

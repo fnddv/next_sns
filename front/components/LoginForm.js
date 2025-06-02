@@ -1,7 +1,15 @@
 import React, { useCallback, useState } from "react";
-import Link from "next/Link";
+import styled from "styled-components";
 
-const LoginForm = () => {
+const StyledLoginForm = styled.form`
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+`;
+
+const LoginForm = ({}) => {
   const [userId, setUserId] = useState();
   const [userPassword, setUserPassword] = useState();
   const onChangeId = useCallback((e) => {
@@ -10,8 +18,13 @@ const LoginForm = () => {
   const onChangePassword = useCallback((e) => {
     setUserPassword(e.target.value);
   }, []);
+
+  const onSubmitForm = useCallback(() => {
+    console.log(userId, userPassword);
+  }, []);
+
   return (
-    <form action="" method="post">
+    <StyledLoginForm action="" method="post" onFinish={onSubmitForm}>
       <div>
         <label htmlFor="user-id">id</label>
         <input
@@ -36,11 +49,8 @@ const LoginForm = () => {
 
       <div>
         <button type="submit">login</button>
-        <Link href="./signup">
-          <a>SignUp</a>
-        </Link>
       </div>
-    </form>
+    </StyledLoginForm>
   );
 };
 
